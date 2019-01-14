@@ -1,0 +1,23 @@
+div{
+    
+    text-align: center;
+    color: white;
+    width: 33%;
+    margin-left: 33%;
+    height:200px
+}
+div:hover{
+    font-weight:bold;
+}
+#div01{
+    background-color: #333f50;
+}
+#div02{
+    background-color: #3f3350;
+}
+#div03{
+    background-color: #50333f;
+}
+button{
+    margin: 30px;
+}

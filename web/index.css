@@ -1,0 +1,13 @@
+.assignments {
+    padding: 15px 15px;
+    list-style-type: none;
+}
+.assignments:hover{
+    background-color: #333f50;
+    color: white;
+    cursor: pointer;
+}
+a {
+    color: black;
+    text-decoration: none;
+}

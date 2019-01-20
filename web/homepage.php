@@ -24,6 +24,8 @@
                 <div class="col-lg-6">
                     <div>
                         <?php
+                            echo "PHP:"
+                            date_default_timezone_set("America/Boise");
                             echo "Today is " . date("m/d/Y") . "<br>";
                             echo "The time in Rexburg is " . date("h:i:sa") . "<br>";
                         ?>

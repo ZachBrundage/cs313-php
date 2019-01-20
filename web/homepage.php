@@ -12,7 +12,7 @@
                 <a class="navbar-brand" href="homepage.html">Zach's Homepage</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="homepage.html">Home</a></li>
+                <li class="active"><a href="homepage.php">Home</a></li>
                 <li><a href="individualAssignmentIndex.html">Individual Assignments</a></li>
                 <li><a href="teamActivityIndex.html">Group Assignments</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -22,6 +22,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
+                    <div>
+                        <?php
+                            echo "Today is " . date("m/d/Y") . "<br>";
+                            echo "The time in Rexburg is " . date("h:i:sa") . "<br>";
+                        ?>
+                    </div>
                     <img src="Zach.jpg" class="img-circle">
                 </div>
                 <div class="col-lg-6">

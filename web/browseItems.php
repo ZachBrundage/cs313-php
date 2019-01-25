@@ -21,19 +21,19 @@
         </nav><br><br>
         <div class="container">
             <div class="row">
-                <div class="c0l-sm-4"><img src="images/omam.jpg"></div>
-                <div class="c0l-sm-4"><img src="images/brandNew.jpg"></div>
-                <div class="c0l-sm-4"><img src="images/microwave.jpg"></div>
+                <div class="col-sm-4"><img src="images/omam.jpg"></div>
+                <div class="col-sm-4"><img src="images/brandNew.jpg"></div>
+                <div class="col-sm-4"><img src="images/microwave.jpg"></div>
             </div>
             <div class="row">
-                <div class="c0l-sm-4"><img src="images/modernBaseball.jpg"></div>
-                <div class="c0l-sm-4"><img src="images/silentPlanet.jpg"></div>
-                <div class="c0l-sm-4"><img src="images/dgd.jpg"></div>
+                <div class="col-sm-4"><img src="images/modernBaseball.jpg"></div>
+                <div class="col-sm-4"><img src="images/silentPlanet.jpg"></div>
+                <div class="col-sm-4"><img src="images/dgd.jpg"></div>
             </div>
             <div class="row">
-                <div class="c0l-sm-4"><img src="images/mooseBlood.jpg"></div>
-                <div class="c0l-sm-4"><img src="images/adtr.jpg"></div>
-                <div class="c0l-sm-4"><img src="images/wonderYears.jpg"></div>
+                <div class="col-sm-4"><img src="images/mooseBlood.jpg"></div>
+                <div class="col-sm-4"><img src="images/adtr.jpg"></div>
+                <div class="cl-sm-4"><img src="images/wonderYears.jpg"></div>
             </div>
         </div>
     </body>

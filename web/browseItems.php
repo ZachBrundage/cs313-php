@@ -36,12 +36,13 @@
                 <div class="col-sm-4">
                     <img src="images/brandNew.jpg">
                     <p>Brand New - The Devil And God Are Raging Inside Me</p>
+                    <input type="number" name="brandNew" value="0">
                     <button class="btn" type="submit" name="brandNew" value="The Devil and God are Raging Inside Me">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">
                     <img src="images/microwave.jpg">
                     <p>Microwave - Much Love</p>
-                    <input type="text" name="choice01" value="MICRO">
+                    <input type="number" name="micro" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
             </div>
@@ -49,16 +50,19 @@
                 <div class="col-sm-4">
                     <img src="images/modernBaseball.jpg">
                     <p> Modern Baseball - You're Gonna Miss It All</p>
+                    <input type="number" name="modBase" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">
                     <img src="images/silentPlanet.jpg">
                     <p> Silent Planet - When The End Began</p>
+                    <input type="number" name="silPlanet" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">
                     <img src="images/dgd.jpg">
                     <p>Dance Gavin Dance - Mothership</p>
+                    <input type="number" name="DGD" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
             </div>
@@ -66,16 +70,19 @@
                 <div class="col-sm-4">
                     <img src="images/mooseBlood.jpg">
                     <p>Moose Blood - I Don't Think I Can Do This Anymore</p>
+                    <input type="number" name="mooseBlood" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">
                     <img src="images/adtr.jpg">
                     <p> A Day To Remember - Homesick</p>
+                    <input type="number" name="ADTR" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">
                     <img src="images/wonderYears.jpg">
                     <p>The Wonder Years - No Closer To Heaven</p>
+                    <input type="number" name="wonderYears" value="0">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
             </div>

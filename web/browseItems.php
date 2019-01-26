@@ -31,7 +31,7 @@
                     <img src="images/omam.jpg" class="img-responsive">
                     <p>Of Mice and Men - Of Mice and Men</p>
                     <input type="text" name="choice" value="OMAM">
-                    <button type="submit" class="btn" name="omam" value="Of Mice and Men">Add to Cart</button>
+                    <button type="submit" class="btn">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">
                     <img src="images/brandNew.jpg">
@@ -41,6 +41,7 @@
                 <div class="col-sm-4">
                     <img src="images/microwave.jpg">
                     <p>Microwave - Much Love</p>
+                    <input type="text" name="choice01" value="MICRO">
                     <button class="btn" type="submit">Add to Cart</button>
                 </div>
             </div>

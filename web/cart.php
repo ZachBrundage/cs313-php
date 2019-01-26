@@ -1,12 +1,13 @@
 <?php
     session_start();
-    $brandNew = $_POST['choice'];
+    $OMAM = $_POST['choice'];
+    $MICRO = $_POST['choice01'];
 ?>
 
 <!DOCTYPE html>
 <html>
     <head></head>
     <body>
-        <h1>Selected: <?php echo $brandNew; ?></h1>
+        <h1>Selected: <?php echo $OMAM . ", " . $MICRO; ?></h1>
     </body>
 </html>

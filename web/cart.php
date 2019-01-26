@@ -1,12 +1,12 @@
 <?php
     session_start();
-    $brandNew = $_POST['brandNew'];
+    $brandNew = $_POST['choice'];
 ?>
 
 <!DOCTYPE html>
 <html>
     <head></head>
     <body>
-        <?php echo "selected: " . $brandNew; ?>
+        <h1>Selected: <?php echo $brandNew; ?></h1>
     </body>
 </html>

@@ -30,7 +30,7 @@
                 <div class="col-sm-4">
                     <img src="images/omam.jpg" class="img-responsive">
                     <p>Of Mice and Men - Of Mice and Men</p>
-                    <input type="number" name="OMAN" value="0">
+                    <input type="number" name="OMAM" value="0">
                     <button type="submit" class="btn">Add to Cart</button>
                 </div>
                 <div class="col-sm-4">

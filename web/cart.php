@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $OMAM = $_POST['choice'];
+    $OMAM = $_POST['OMAM'];
     $MICRO = $_POST['choice01'];
 ?>
 

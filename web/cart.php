@@ -17,7 +17,7 @@
     <head></head>
     <body>
         
-        <?php print_r($_SESSION); ?>
+        <?php echo $_SESSION["OMAM"]; ?>
         
         <h1>OMAM: <?php echo $OMAM; ?></h1>
         <h1>Brand New: <?php echo $brandNew; ?></h1>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zach's Homepage</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="teamActivity03.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="homepage.php">Zach's Homepage</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="homepage.php">Home</a></li>
+                <li><a href="individualAssignmentIndex.html">Individual Assignments</a></li>
+                <li class="active"><a href="teamActivityIndex.html">Group Assignments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        </nav><br><br>
+        <div class="container">
+            <div class="card">
+                <h1>Team Activity 03</h1><br>
+                <div class="code-body">
+                    <p class="code-text">
+                        CREATE TABLE user_table ( <br>
+                        user_id serial PRIMARY KEY, <br>
+                        username varchar(255) UNIQUE NOT NULL, <br>
+                        user_password varchar(255) NOT NULL, <br>
+                        created_on TIMESTAMP NOT NULL, <br>
+                        last_login TIMESTAMP <br>
+                        ); <br><br>
+                        
+                        CREATE TABLE speakers ( <br>
+                        speaker_id serial PRIMARY KEY, <br>
+                        speaker_name varchar(255) NOT NULL <br>
+                        ); <br><br>
+                        
+                        CREATE TABLE talk ( <br>
+                        talk_id serial PRIMARY KEY, <br>
+                        speaker_id int NOT NULL REFERENCES speakers(speaker_id), <br>
+                        talk_date date NOT NULL, <br>
+                        talk_session varchar(255) NOT NULL, <br>
+                        talk_url varchar(255) NOT NULL <br>
+                        ); <br><br>
+                        
+                        CREATE TABLE notes ( <br>
+                        note_id serial PRIMARY KEY, <br>
+                        user_id int NOT NULL REFERENCES user_table(user_id), <br>
+                        talk_id int NOT NULL REFERENCES talk(talk_id), <br>
+                        notes_text text NOT NULL <br>
+                        );
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

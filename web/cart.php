@@ -1,7 +1,7 @@
 <?php
     session_start();
     $OMAM = $_POST['OMAM'];
-    $_SESSEION["OMAM"] = $OMAM;
+    $_SESSEION["OMAM"] = "Display Working";
     $_SESSEION["brandNew"] = $_POST['brandNew'];
     $_SESSEION["micro"] = $_POST['micro'];
     $_SESSEION["modBase"] = $_POST['modBase'];

@@ -16,7 +16,7 @@
     <head></head>
     <body>
         <h1>OMAM: <?php echo $OMAM; ?></h1>
-        <h1>Brand New: <?php echo $brandNew; ?></h1>v
+        <h1>Brand New: <?php echo $brandNew; ?></h1>
         <h1>Microwave: <?php echo $MICRO; ?></h1>
         <h1>Modern Baseball: <?php echo $modBase; ?></h1>
         <h1>Silent Planet: <?php echo $silPlanet; ?></h1>

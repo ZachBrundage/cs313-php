@@ -17,3 +17,8 @@ h1{
     font-size: 85px;
     margin-bottom: 7%;
 }
+
+.row {
+    width: 75%;
+    margin-left: 12.5%
+}

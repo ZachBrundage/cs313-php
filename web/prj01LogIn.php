@@ -21,11 +21,11 @@
         </nav><br><br>
         <div class="container">
             <form action="" method="post">
-                <h1>Create New User</h1>
-                Usename: <input type="text"><br><br>
-                Password: <input type="password" value="Password"><br><br>
-                Confirm Password: <input type="password" value="Password"><br><br>
-                <input type="submit" value="Register">
+                <h1>Sign In</h1>
+                <input type="text" value="Username"><br><br>
+                <input type="password" value="Password"><br><br>
+                <input type="submit" value="Sign In">
+                <button id="newUser">Create New User</button>
             </form>
         </div>
     </body>

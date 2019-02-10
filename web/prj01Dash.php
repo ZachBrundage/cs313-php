@@ -33,13 +33,12 @@ $userid = $marker['userid'];
 <html>
     <head>
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="prj01.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
         <h1><?php echo $userName . " " . '\'s '?>Dashboard</h1>
-        <h1>UserID: <?php echo $userid; ?></h1>
-        <h1>Password: <?php echo $password; ?></h1>
         <div class="container">
             <table class="table">
                 <tr>

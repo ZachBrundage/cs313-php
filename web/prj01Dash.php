@@ -26,5 +26,6 @@ catch (PDOException $ex)
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
+        <h1>Dashboard</h1>
     </body>
 </html>

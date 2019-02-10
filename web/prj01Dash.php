@@ -33,7 +33,7 @@ $userid = $db->query('SELECT userid FROM users WHERE username =\'' . $userName .
         <h1><?php echo $userName . " " . '\'s '?>Dashboard</h1>
         <div class="container">
             <?php
-                foreach ($db->query('SELECT * FROM entries') as $row)
+                foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
                 echo $row['entryid'] . " " . $row['userid'] . " " . $row['entrydate'] . " " . 
                     $row['weight'] . " " . $row['workouttype'] . " " . $row['caloricintake'] .

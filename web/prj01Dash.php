@@ -21,7 +21,7 @@ catch (PDOException $ex)
 
 // Session Vars
 $userName = $_POST["Username"];
-//$userid = $db->query('SELECT userid FROM users WHERE username =\'' . $userName . '\'');
+$userid = $db->query('SELECT userid FROM users WHERE username =\'' . $userName . '\'');
 ?>
 <!DOCTYPE html>
 <html>

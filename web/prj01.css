@@ -9,12 +9,10 @@ html, body {
     align-items: center;
 }
 
-.container-fluid {
-    
-    width:33%;
-}
-
 h1 {
     text-align: center;
 }
 
+td, th {
+    text-align: center;
+}

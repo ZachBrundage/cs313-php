@@ -30,8 +30,8 @@ catch (PDOException $ex)
         <div class="container">
             <form action="prj01Dash.php" method="post">
                 <h1>Sign In</h1>
-                <input type="text" value="Username"><br><br>
-                <input type="password" value="Password"><br><br>
+                <input type="text" value="Username" name="Username"><br><br>
+                <input type="password" value="Password" name="Password"><br><br>
                 <input type="submit" value="Sign In">
                 <button id="newUser">Create New User</button>
             </form>

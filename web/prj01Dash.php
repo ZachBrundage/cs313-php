@@ -21,7 +21,12 @@ catch (PDOException $ex)
 
 // Session Vars
 $userName = $_POST["Username"];
-$select = $db->query('SELECT userid FROM users WHERE username =\'' . $userName . '\'');
+$password = $_POST["Password"];
+$select = $db->query('SELECT userid 
+                      FROM users 
+                      WHERE username =\'' . $userName . '\'
+                      AND password =\'' . $password . '\''
+                    );
 $marker = $select->fetch(PDO::FETCH_ASSOC);
 $userid = $marker['userid'];
 ?>

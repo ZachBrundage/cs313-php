@@ -18,6 +18,9 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+
+// Session Vars
+$userName = $_POST["Username"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +29,6 @@ catch (PDOException $ex)
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1>Dashboard</h1>
+        <h1><?php echo $userName . '\'s '?>Dashboard</h1>
     </body>
 </html>

@@ -43,7 +43,7 @@ $_SESSION["userId"] = $userid;
     <body>
         <h1><?php echo $userName . '\'s '?>Dashboard</h1>
         <form action="prj01Results.php" method="post">
-            Search By Date "yyyy-mm-dd":
+            Search By Date:
             <input type="text" name="search">
             <input type="submit" value="Search">
         </form>

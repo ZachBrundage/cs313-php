@@ -32,7 +32,7 @@ $userid = $marker['userid'];
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
         <script src="prj01.js" type="text/javascript"></script>
     </head>
@@ -41,7 +41,7 @@ $userid = $marker['userid'];
         <h1>UserID: <?php echo $userid; ?></h1>
         <h1>Password: <?php echo $password; ?></h1>
         <div class="container">
-            <table class="table">
+            <table class="table-hover">
                 <tr>
                     <th> Entry #</th>
                     <th> Entry Date</th>

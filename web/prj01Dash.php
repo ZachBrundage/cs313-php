@@ -40,7 +40,7 @@ $userid = $marker['userid'];
         <h1>UserID: <?php echo $userid; ?></h1>
         <h1>Password: <?php echo $password; ?></h1>
         <div class="container">
-            <table>
+            <table class="table">
                 <tr>
                     <th> Entry #</th>
                     <th> Entry Date</th>

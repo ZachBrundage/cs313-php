@@ -21,6 +21,7 @@ catch (PDOException $ex)
 
 // Session Vars
 $userName = $_POST["Username"];
+$userid = $db->query('SELECT userid FROM users WHERE username =\'' . $userName . '\'');
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +30,7 @@ $userName = $_POST["Username"];
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1><?php echo $userName . '\'s '?>Dashboard</h1>
+        <h1><?php echo $userName . " " . $userid . '\'s '?>Dashboard</h1>
         <div class="container">
             <?php
                 foreach ($db->query('SELECT * FROM entries') as $row)

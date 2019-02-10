@@ -32,7 +32,7 @@ $userid = $marker['userid'];
 <!DOCTYPE html>
 <html>
     <head>
-        <link src="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
         <script src="prj01.js" type="text/javascript"></script>
     </head>

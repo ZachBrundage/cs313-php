@@ -35,6 +35,7 @@ $userid = $marker['userid'];
     <body>
         <h1><?php echo $userName . " " . '\'s '?>Dashboard</h1>
         <h1>UserID: <?php echo $userid; ?></h1>
+        <h1>Password: <?php echo $password; ?></h1>
         <div class="container">
             <?php
                 foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)

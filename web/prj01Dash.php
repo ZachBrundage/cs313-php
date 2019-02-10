@@ -38,8 +38,8 @@ $userid = $marker['userid'];
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1><?php echo $userName . " " . '\'s '?>Dashboard</h1>
-        <div class="container">
+        <h1><?php echo $userName . '\'s '?>Dashboard</h1>
+        <div class="container-fluid">
             <table class="table">
                 <tr>
                     <th> Entry #</th>

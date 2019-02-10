@@ -50,7 +50,6 @@ $_SESSION["userId"] = $userid;
         <div class="container">
             <table class="table">
                 <tr>
-                    <th> Entry #</th>
                     <th> Entry Date</th>
                     <th> Weight</th>
                     <th> Workout Type</th>
@@ -61,7 +60,6 @@ $_SESSION["userId"] = $userid;
                 foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
                 echo "<tr>";
-                     echo "<td>" . $row['entryid'] . "</td>";
                      echo "<td>" . $row['entrydate'] . "</td>";
                      echo "<td>" . $row['weight'] . "</td>";
                      echo "<td>" . $row['workouttype'] . "</td>";

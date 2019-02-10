@@ -35,7 +35,6 @@ $date = $_POST['search'];
         <div class="container">
             <table class="table">
                 <tr>
-                    <th> Entry #</th>
                     <th> Entry Date</th>
                     <th> Weight</th>
                     <th> Workout Type</th>
@@ -46,7 +45,6 @@ $date = $_POST['search'];
                 foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\' AND entrydate =\'' . $date . '\'') as $row)
             {
                 echo "<tr>";
-                     echo "<td>" . $row['entryid'] . "</td>";
                      echo "<td>" . $row['entrydate'] . "</td>";
                      echo "<td>" . $row['weight'] . "</td>";
                      echo "<td>" . $row['workouttype'] . "</td>";

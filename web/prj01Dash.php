@@ -39,7 +39,7 @@ $userid = $marker['userid'];
     </head>
     <body>
         <h1><?php echo $userName . '\'s '?>Dashboard</h1>
-        <div class="container-fluid">
+        <div class="container">
             <table class="table">
                 <tr>
                     <th> Entry #</th>

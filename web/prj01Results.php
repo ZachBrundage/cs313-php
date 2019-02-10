@@ -19,18 +19,8 @@ catch (PDOException $ex)
   die();
 }
 
-// User Verification
-$userName = $_POST["Username"];
-$password = $_POST["Password"];
-$select = $db->query('SELECT userid 
-                      FROM users 
-                      WHERE username =\'' . $userName . '\'
-                      AND userpass =\'' . $password . '\'');
-$marker = $select->fetch(PDO::FETCH_ASSOC);
-$userid = $marker['userid'];
-
-// Session - User Id
-$_SESSION["userId"] = $userid;
+$userid = $_SESSION["userId"];
+$date = $_POST['search'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,12 +31,7 @@ $_SESSION["userId"] = $userid;
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1><?php echo $userName . '\'s '?>Dashboard</h1>
-        <form action="prj01Results.php" method="post">
-            Search By Date "yyyy-mm-dd":
-            <input type="text" name="search">
-            <input type="submit" value="Search">
-        </form>
+        <h1>Search Results</h1>
         <div class="container">
             <table class="table">
                 <tr>
@@ -58,7 +43,7 @@ $_SESSION["userId"] = $userid;
                     <th> Calories Burned</th>
                 </tr>
             <?php
-                foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
+                foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\' AND entrydate =\'' . $date . '\'') as $row)
             {
                 echo "<tr>";
                      echo "<td>" . $row['entryid'] . "</td>";

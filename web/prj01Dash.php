@@ -40,14 +40,29 @@ $userid = $marker['userid'];
         <h1>UserID: <?php echo $userid; ?></h1>
         <h1>Password: <?php echo $password; ?></h1>
         <div class="container">
+            <table>
+                <tr>
+                    <th> Entry #</th>
+                    <th> Entry Date</th>
+                    <th> Weight</th>
+                    <th> Workout Type</th>
+                    <th> Caloric Intake</th>
+                    <th> Calories Burned</th>
+                </tr>
             <?php
                 foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
-                echo $row['entryid'] . " " . $row['userid'] . " " . $row['entrydate'] . " " . 
-                    $row['weight'] . " " . $row['workouttype'] . " " . $row['caloricintake'] .
-                    " " . $row['caloriesburned'] . "<br>";
+                echo "<tr>";
+                     echo "<td>" . $row['entryid'] . "</td>";
+                     echo "<td>" . $row['entrydate'] . "</td>";
+                     echo "<td>" . $row['weight'] . "</td>";
+                     echo "<td>" . $row['workouttype'] . "</td>";
+                     echo "<td>" . $row['caloricintake'] . "</td>";
+                     echo "<td>" . $row['caloriesburned'] . "</td>";
+                echo "</tr>";
             }
             ?>
+            </table>
         </div>
     </body>
 </html>

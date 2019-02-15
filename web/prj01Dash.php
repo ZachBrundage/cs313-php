@@ -48,11 +48,6 @@ $_SESSION["userId"] = $userid;
             <input type="submit" value="Search">
         </form>
         <div class="container">
-            <table class="table">
-                <tr>
-                    <th> Entry Date</th>
-                    <th> Weight</th>
-                </tr>
             <?php
                 foreach ($db->query('SELECT entrydate, weight FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
@@ -62,7 +57,6 @@ $_SESSION["userId"] = $userid;
                 echo "</tr>";
             }
             ?>
-            </table>
         </div>
     </body>
 </html>

@@ -52,9 +52,6 @@ $_SESSION["userId"] = $userid;
                 <tr>
                     <th> Entry Date</th>
                     <th> Weight</th>
-                    <th> Workout Type</th>
-                    <th> Caloric Intake</th>
-                    <th> Calories Burned</th>
                 </tr>
             <?php
                 foreach ($db->query('SELECT entrydate, weight FROM entries WHERE userid =\'' . $userid . '\'') as $row)

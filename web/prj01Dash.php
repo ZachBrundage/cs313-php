@@ -57,14 +57,11 @@ $_SESSION["userId"] = $userid;
                     <th> Calories Burned</th>
                 </tr>
             <?php
-                foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
+                foreach ($db->query('SELECT entrydate AND weight FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
                 echo "<tr>";
                      echo "<td>" . $row['entrydate'] . "</td>";
                      echo "<td>" . $row['weight'] . "</td>";
-                     echo "<td>" . $row['workouttype'] . "</td>";
-                     echo "<td>" . $row['caloricintake'] . "</td>";
-                     echo "<td>" . $row['caloriesburned'] . "</td>";
                 echo "</tr>";
             }
             ?>

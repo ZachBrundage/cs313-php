@@ -57,7 +57,7 @@ $_SESSION["userId"] = $userid;
                     <th> Calories Burned</th>
                 </tr>
             <?php
-                foreach ($db->query('SELECT entrydate AND weight FROM entries WHERE userid =\'' . $userid . '\'') as $row)
+                foreach ($db->query('SELECT entrydate, weight FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
                 echo "<tr>";
                      echo "<td>" . $row['entrydate'] . "</td>";

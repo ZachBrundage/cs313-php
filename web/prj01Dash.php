@@ -48,15 +48,27 @@ $_SESSION["userId"] = $userid;
             <input type="submit" value="Search">
         </form>
         <div class="container">
+            <table>
+                <tr class="table">
+                    <th>Entry Date</th>
+                    <th>Weight</th>
+                    <th>Workout Type</th>
+                    <th>Caloric Intake</th>
+                    <th>Calories Burned</th>
+                </tr>
             <?php
-                foreach ($db->query('SELECT entrydate, weight FROM entries WHERE userid =\'' . $userid . '\'') as $row)
+                foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
             {
                 echo "<tr>";
                      echo "<td>" . $row['entrydate'] . "</td>";
                      echo "<td>" . $row['weight'] . "</td>";
+                     echo "<td>" . $row['workouttype'] . "</td>";
+                     echo "<td>" . $row['caloricintake'] . "</td>";
+                     echo "<td>" . $row['caloriesburned'] . "</td>";
                 echo "</tr>";
             }
             ?>
+            </table>
         </div>
     </body>
 </html>

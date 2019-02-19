@@ -46,7 +46,8 @@ $_SESSION["userId"] = $userid;
             Search By Date:
             <input type="text" name="search">
             <input type="submit" value="Search">
-        </form>
+        </form><br>
+        <button>Create New Entry</button>
         <div class="container">
             <table class="table">
                 <tr >

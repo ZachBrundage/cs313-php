@@ -41,35 +41,13 @@ $_SESSION["userId"] = $userid;
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1><?php echo $userName . '\'s '?>Dashboard</h1>
-        <form action="prj01Results.php" method="post">
-            Search By Date:
-            <input type="text" name="search">
-            <input type="submit" value="Search">
-        </form><br>
-        <a href="prj01NewEntry.php"><button>Create New Entry</button></a>
-        <div class="container">
-            <table class="table">
-                <tr >
-                    <th>Entry Date</th>
-                    <th>Weight</th>
-                    <th>Workout Type</th>
-                    <th>Caloric Intake</th>
-                    <th>Calories Burned</th>
-                </tr>
-            <?php
-                foreach ($db->query('SELECT * FROM entries WHERE userid =\'' . $userid . '\'') as $row)
-            {
-                echo "<tr>";
-                     echo "<td>" . $row['entrydate'] . "</td>";
-                     echo "<td>" . $row['weight'] . "</td>";
-                     echo "<td>" . $row['workouttype'] . "</td>";
-                     echo "<td>" . $row['caloricintake'] . "</td>";
-                     echo "<td>" . $row['caloriesburned'] . "</td>";
-                echo "</tr>";
-            }
-            ?>
-            </table>
-        </div>
+        <form action="prj01Dash.php">
+            <input type="date" name="Entry Date"><br><br>
+            <input type="number" name="Weight"><br><br>
+            <input type="text" name="Workout"><br><br>
+            <input type="text" name="caloricIntake"><br><br>
+            <input type="text" name="caloriesBurned"><br><br>
+            <input type="submit">
+        </form>
     </body>
 </html>

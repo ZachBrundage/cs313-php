@@ -48,7 +48,7 @@ $_SESSION["userId"] = $userid;
             <input type="submit" value="Search">
         </form>
         <div class="container">
-            <table class="table-striped">
+            <table class="table">
                 <tr >
                     <th>Entry Date</th>
                     <th>Weight</th>

@@ -41,13 +41,15 @@ $_SESSION["userId"] = $userid;
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <form action="prj01Dash.php">
-            <input type="date" name="Entry Date"><br><br>
-            <input type="number" name="Weight"><br><br>
-            <input type="text" name="Workout"><br><br>
-            <input type="text" name="caloricIntake"><br><br>
-            <input type="text" name="caloriesBurned"><br><br>
-            <input type="submit">
-        </form>
+        <div class="container">
+            <form action="prj01Dash.php">
+                <input type="date" name="Entry Date"><br><br>
+                <input type="number" name="Weight"><br><br>
+                <input type="text" name="Workout"><br><br>
+                <input type="text" name="caloricIntake"><br><br>
+                <input type="text" name="caloriesBurned"><br><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
     </body>
 </html>

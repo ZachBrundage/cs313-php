@@ -23,6 +23,7 @@ catch (PDOException $ex)
 $userid = $_SESSION["userId"];
 
 // Insert New Row
+/*
 $db->query("INSERT INTO entries(entrydate, weight, workouttype, caloricintake, caloriesburned, userid)
             VALUES ('" . $_POST['Entry Date'] . "', 
                     '" . $_POST['Weight'] . "', 
@@ -30,6 +31,7 @@ $db->query("INSERT INTO entries(entrydate, weight, workouttype, caloricintake, c
                     '" . $_POST['caloricIntake'] . "', 
                     '" . $_POST['caloriesBurned'] . "', 
                     '" . $userid . "')");
+*/
 ?>
 <!DOCTYPE html>
 <html>

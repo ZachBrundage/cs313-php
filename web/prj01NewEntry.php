@@ -18,19 +18,9 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
-// User Verification
-$userName = $_POST["Username"];
-$password = $_POST["Password"];
-$select = $db->query('SELECT userid 
-                      FROM users 
-                      WHERE username =\'' . $userName . '\'
-                      AND userpass =\'' . $password . '\'');
-$marker = $select->fetch(PDO::FETCH_ASSOC);
-$userid = $marker['userid'];
-
 // Session - User Id
-$_SESSION["userId"] = $userid;
+$userid = $_SESSION["userId"];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,6 +32,7 @@ $_SESSION["userId"] = $userid;
     </head>
     <body>
         <div class="container">
+            <h1><?php echo $userid ?></h1>
             <form action="prj01Insert.php" method="post">
                 <input type="date" name="Entry Date"><br><br>
                 <input type="number" name="Weight"><br><br>

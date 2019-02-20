@@ -31,6 +31,12 @@ $userid = $marker['userid'];
 
 // Session - User Id
 $_SESSION["userId"] = $userid;
+
+// Insert New Row
+$db->query('INSERT INTO Entries(entrydate, weight, workouttype, caloricintake, caloriesburned)
+            VALUES (' . $_POST["Entry Date"] . ',' . $_POST["Weight"] . ',' .  
+                        $_POST["Workout"] . ',' . $_POST["caloricIntake"] . ',' . 
+                        $_POST["caloriesBurned"] . ')');
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,15 +47,6 @@ $_SESSION["userId"] = $userid;
         <script src="prj01.js" type="text/javascript"></script>
     </head>
     <body>
-        <div class="container">
-            <form action="prj01Insert.php" method="post">
-                <input type="date" name="Entry Date"><br><br>
-                <input type="number" name="Weight"><br><br>
-                <input type="text" name="Workout"><br><br>
-                <input type="text" name="caloricIntake"><br><br>
-                <input type="text" name="caloriesBurned"><br><br>
-                <input type="submit" value="submit">
-            </form>
-        </div>
+        <a href="prj01Dash.php">Back to Dash</a>
     </body>
 </html>

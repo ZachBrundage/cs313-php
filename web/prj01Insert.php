@@ -23,10 +23,13 @@ catch (PDOException $ex)
 $userid = $_SESSION["userId"];
 
 // Insert New Row
-$db->query('INSERT INTO entries(entrydate, weight, workouttype, caloricintake, caloriesburned, userid)
-            VALUES (' . $_POST["Entry Date"] . ',' . $_POST["Weight"] . ',' .  
-                        $_POST["Workout"] . ',' . $_POST["caloricIntake"] . ',' . 
-                        $_POST["caloriesBurned"] . ',' . $userid . ');');
+$db->query("INSERT INTO entries(entrydate, weight, workouttype, caloricintake, caloriesburned, userid)
+            VALUES ('" . $_POST['Entry Date'] . "', 
+                    '" . $_POST['Weight'] . "', 
+                    '" . $_POST['Workout'] . "', 
+                    '" . $_POST['caloricIntake'] . "', 
+                    '" . $_POST['caloriesBurned'] . "', 
+                    '" . $userid . "')");
 ?>
 <!DOCTYPE html>
 <html>

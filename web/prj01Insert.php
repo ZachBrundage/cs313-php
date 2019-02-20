@@ -33,10 +33,10 @@ $userid = $marker['userid'];
 $_SESSION["userId"] = $userid;
 
 // Insert New Row
-$db->query('INSERT INTO Entries(entrydate, weight, workouttype, caloricintake, caloriesburned)
+$db->query('INSERT INTO entries(entrydate, weight, workouttype, caloricintake, caloriesburned, userid)
             VALUES (' . $_POST["Entry Date"] . ',' . $_POST["Weight"] . ',' .  
                         $_POST["Workout"] . ',' . $_POST["caloricIntake"] . ',' . 
-                        $_POST["caloriesBurned"] . ');');
+                        $_POST["caloriesBurned"] . ',' . $userid . ');');
 ?>
 <!DOCTYPE html>
 <html>

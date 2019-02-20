@@ -19,18 +19,8 @@ catch (PDOException $ex)
   die();
 }
 
-// User Verification
-$userName = $_POST["Username"];
-$password = $_POST["Password"];
-$select = $db->query('SELECT userid 
-                      FROM users 
-                      WHERE username =\'' . $userName . '\'
-                      AND userpass =\'' . $password . '\'');
-$marker = $select->fetch(PDO::FETCH_ASSOC);
-$userid = $marker['userid'];
-
 // Session - User Id
-$_SESSION["userId"] = $userid;
+$userid = $_SESSION["userId"];
 
 // Insert New Row
 $db->query('INSERT INTO entries(entrydate, weight, workouttype, caloricintake, caloriesburned, userid)

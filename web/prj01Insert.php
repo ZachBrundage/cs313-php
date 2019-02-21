@@ -22,16 +22,22 @@ catch (PDOException $ex)
 // Session - User Id
 $userid = $_SESSION["userId"];
 
-// Insert New Row
-/*
-$db->query("INSERT INTO entries(entrydate, weight, workouttype, caloricintake, caloriesburned, userid)
-            VALUES ('" . $_POST['Entry Date'] . "', 
-                    '" . $_POST['Weight'] . "', 
-                    '" . $_POST['Workout'] . "', 
-                    '" . $_POST['caloricIntake'] . "', 
-                    '" . $_POST['caloriesBurned'] . "', 
-                    '" . $userid . "')");
-*/
+// Form Variables
+$entryDate = htmlspecialchars($_POST['Entry Date']);
+$weight = htmlspecialchars($_POST['Weight']);
+$workout = htmlspecialchars($_POST['Workout']);
+$caloricIntake = htmlspecialchars($_POST['caloricIntake']);
+$caloriesBurned = htmlspecialchars($_POST['caloriesBurned']);
+
+$stmt = $db->prepare('INSERT INTO entries (userid, entrydate, weight, workouttype, caloricintake, caloriesburned) VALUES (:userid, :entryDate, ,:weight, :workout, :caloricIntake, :caloriesBurned);');
+$stmt->bindValue(':userid', $userid, PDO::PARAM_INT);
+$stmt->bindValue(':entryDate', $entryDate, PDO::PARAM_STR);
+$stmt->bindValue(':weight', $weight, PDO::PARAM_STR);
+$stmt->bindValue(':workout', $workout, PDO::PARAM_STR);
+$stmt->bindValue(':caloricIntake', $caloricIntake, PDO::PARAM_INT);
+$stmt->bindValue(':caloriesBurned', $caloriesBurned, PDO::PARAM_INT);
+$stmt->execute();
+
 ?>
 <!DOCTYPE html>
 <html>

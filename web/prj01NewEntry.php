@@ -34,8 +34,8 @@ $userid = $_SESSION["userId"];
         <div class="container">
             <h1><?php echo $userid ?></h1>
             <form action="prj01Insert.php" method="post">
-                <input type="date" name="Entry Date"><br><br>
-                <input type="number" name="Weight"><br><br>
+                <input type="text" name="Entry Date"><br><br>
+                <input type="text" name="Weight"><br><br>
                 <input type="text" name="Workout"><br><br>
                 <input type="text" name="caloricIntake"><br><br>
                 <input type="text" name="caloriesBurned"><br><br>

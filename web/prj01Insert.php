@@ -34,8 +34,8 @@ $stmt->bindValue(':userid', $userid, PDO::PARAM_INT);
 $stmt->bindValue(':entryDate', $entryDate, PDO::PARAM_STR);
 $stmt->bindValue(':weight', $weight, PDO::PARAM_STR);
 $stmt->bindValue(':workout', $workout, PDO::PARAM_STR);
-$stmt->bindValue(':caloricIntake', $caloricIntake, PDO::PARAM_INT);
-$stmt->bindValue(':caloriesBurned', $caloriesBurned, PDO::PARAM_INT);
+$stmt->bindValue(':caloricIntake', $caloricIntake, PDO::PARAM_STR);
+$stmt->bindValue(':caloriesBurned', $caloriesBurned, PDO::PARAM_STR);
 $stmt->execute();
 
 ?>

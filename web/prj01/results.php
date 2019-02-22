@@ -2,7 +2,7 @@
 session_start();
 $userid = $_SESSION['userid'];
 
-$date = $_POST['search'];
+$date = $_POST["search"];
 
 require('dbConnect.php');
 $db = get_db();

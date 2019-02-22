@@ -10,9 +10,8 @@ $password = $_POST["Password"];
 $query = "SELECT userid FROM users WHERE username = '$username' AND userpass = '$password'";
 $stmt = $db->prepare($query);
 $stmt->execute();
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$userid = $results['userid'];
-echo $userid;
+$results = $stmt->fetchAll(PDO::FETCH_INT);
+echo $results;
 ?>
 <!DOCTYPE html>
 <html>

@@ -13,8 +13,10 @@ $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($results as $result)
 {
-    echo $result['userid'];
+    $userid = $result['userid'];
+    $_SESSION['userid'] = $userid;
 }
+echo $_SESSION['userid'];
 ?>
 <!DOCTYPE html>
 <html>

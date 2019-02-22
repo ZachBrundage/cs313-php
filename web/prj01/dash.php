@@ -6,7 +6,7 @@ echo $userid;
 
 require('dbConnect.php');
 $db = get_db();
-$query = 'SELECT entrydate, weight, workouttype, caloricintake, caloriesburned FROM entries';
+$query = "SELECT entrydate, weight, workouttype, caloricintake, caloriesburned FROM entries WHERE userid = '$userid'";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

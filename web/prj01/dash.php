@@ -1,11 +1,16 @@
 <?php
+session_start();
+
+$userid = $_SESSION['userid'];
+echo $userid;
+
 require('dbConnect.php');
 $db = get_db();
-
 $query = 'SELECT entrydate, weight, workouttype, caloricintake, caloriesburned FROM entries';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html>

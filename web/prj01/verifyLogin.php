@@ -16,13 +16,8 @@ foreach ($results as $result)
     $userid = $result['userid'];
     $_SESSION['userid'] = $userid;
 }
-echo $_SESSION['userid'];
+
+$new_page = "dash.php";
+header("Location: $new_page");
+die();
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>
-        <h1>Working</h1><br>
-    </body>
-</html>

@@ -3,13 +3,15 @@ session_start();
 $userid = $_SESSION['userid'];
 
 $date = $_POST["search"];
-
+echo $date;
+/*
 require('dbConnect.php');
 $db = get_db();
 $query = "SELECT entrydate, weight, workouttype, caloricintake, caloriesburned FROM entries WHERE userid = '$userid' AND entrydate = '$search'";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+*/
 ?>
 <!DOCTYPE html>
 <html>

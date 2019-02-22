@@ -11,13 +11,14 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION["userid"] = $results['userid'];
+var_dump($results);
+
+//$_SESSION["userid"] = $results['userid'];
 ?>
 <!DOCTYPE html>
 <html>
     <head>
     </head>
     <body>
-        <h1>User Id = <?php echo $_SESSION["userid"]; ?></h1>
     </body>
 </html>

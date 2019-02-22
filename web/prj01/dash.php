@@ -46,5 +46,6 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <input type="text" name="search">
             <input type="submit" value="Search">
         </form>
+        <a href="newEntry.php"><button>Create New Entry</button></a>
     </body>
 </html>

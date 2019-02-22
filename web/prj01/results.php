@@ -3,7 +3,6 @@ session_start();
 $userid = $_SESSION['userid'];
 
 $date = $_POST["search"];
-echo $date;
 
 require('dbConnect.php');
 $db = get_db();

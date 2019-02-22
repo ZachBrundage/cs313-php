@@ -11,8 +11,8 @@ $query = "SELECT userid FROM users WHERE username = '$username' AND userpass = '
 $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["userid"] = $results['userid'];
-echo $_SESSION["userid"];
+$userid = $results['userid'];
+echo $userid;
 ?>
 <!DOCTYPE html>
 <html>

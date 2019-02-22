@@ -1,7 +1,6 @@
 <?php
 session_start();
-require('dbConnect.php');
-$db = get_db();
+$userid = $_SESSION['userid'];
 
 $entrydate = $_POST["entryDate"];
 $weight = $_POST["weight"];
@@ -9,22 +8,17 @@ $workout = $_POST["workout"];
 $calIntake = $_POST["caloricIntake"];
 $calBurned = $_POST["caloriesBurned"];
 
-echo $entrydate;
-echo $weight;
-echo $workout;
-echo $calIntake;
-echo $calBurned;
+require('dbConnect.php');
+$db = get_db();
 
-/*
-$query = "SELECT userid FROM users WHERE username = '$username' AND userpass = '$password'";
-$stmt = $db->prepare($query);
+$stmt = $db->prepare('INSERT INTO entries(userid, entrydate, weight, workouttype, caloricintake, caloriesburned) VALUES (:userid, :entrydate, :weight, :workouttype, :caloricintake, :caloriesburned)');
+$stmt->bindValue(':userid', $userid, PDO::PARAM_INT);
+$stmt->bindValue(':entrydate', $entrydate, PDO::PARAM_STR);
+$stmt->bindValue(':weight', $weight, PDO::PARAM_INT);
+$stmt->bindValue(':workouttype', $workout, PDO::PARAM_STR);
+$stmt->bindValue(':caloricintake', $calIntake, PDO::PARAM_INT);
+$stmt->bindValue(':caloriesburned', $calBurned, PDO::PARAM_INT);
 $stmt->execute();
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($results as $result)
-{
-    $userid = $result['userid'];
-    $_SESSION['userid'] = $userid;
-}
 
 $new_page = "dash.php";
 header("Location: $new_page");

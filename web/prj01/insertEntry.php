@@ -23,5 +23,4 @@ $stmt->execute();
 $new_page = "dash.php";
 header("Location: $new_page");
 die();
-*/
 ?>

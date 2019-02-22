@@ -11,14 +11,14 @@ $query = "SELECT userid FROM users WHERE username = '$username' AND userpass = '
 $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-var_dump($results);
 $_SESSION["userid"] = $results['userid'];
+echo $_SESSION["userid"];
 ?>
 <!DOCTYPE html>
 <html>
     <head>
     </head>
     <body>
-        <h1>Working</h1>
+        <h1>Working</h1><br>
     </body>
 </html>

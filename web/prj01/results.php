@@ -2,9 +2,11 @@
 session_start();
 $userid = $_SESSION['userid'];
 
+$date = $_POST['search'];
+
 require('dbConnect.php');
 $db = get_db();
-$query = "SELECT entrydate, weight, workouttype, caloricintake, caloriesburned FROM entries WHERE userid = '$userid'";
+$query = "SELECT entrydate, weight, workouttype, caloricintake, caloriesburned FROM entries WHERE userid = '$userid' AND entrydate = '$search'";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -14,7 +16,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <head>
     </head>
     <body>
-        <h1> Dashboard </h1>
+        <h1> Search Results </h1>
         <table>
             <tr>
                 <th> Entry Date</th>
@@ -42,9 +44,5 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
             ?>
         </table>
-        <form action="results.php" method="post">
-            <input type="text" name="search">
-            <input type="submit" value="Search">
-        </form>
     </body>
 </html>

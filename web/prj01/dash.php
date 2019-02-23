@@ -12,12 +12,11 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="bootstrap.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <h1> Dashboard </h1>
-        <div class="container">
-            <table class="table">
+            <table>
                 <tr>
                     <th> Entry Date</th>
                     <th> Weight</th>
@@ -44,7 +43,6 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
             </table>
-        </div>
         <form action="results.php" method="post">
             <input type="text" name="search">
             <input type="submit" value="Search">

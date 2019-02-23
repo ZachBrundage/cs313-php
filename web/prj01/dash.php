@@ -12,6 +12,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="bootstrap.css" rel="stylesheet">
     </head>
     <body>
         <h1> Dashboard </h1>

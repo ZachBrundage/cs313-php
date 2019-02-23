@@ -9,5 +9,6 @@
             <input type="password" value="Password" name="Password">
             <input type="submit" value="Submit">
         </form>
+        <a href="newUser.php"><button>Create New User</button></a>
     </body>
 </html>

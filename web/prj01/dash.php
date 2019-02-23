@@ -16,33 +16,35 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </head>
     <body>
         <h1> Dashboard </h1>
-        <table>
-            <tr>
-                <th> Entry Date</th>
-                <th> Weight</th>
-                <th> Workout Type</th>
-                <th> Caloric Intake</th>
-                <th> Calories Burned</th>
-            </tr>
-            <?php
-            foreach ($results as $result)
-            {
-                $entryDate = $result['entrydate'];
-                $weight = $result['weight'];
-                $workout = $result['workouttype'];
-                $caloricIntake = $result['caloricintake'];
-                $caloriesBurned = $result['caloriesburned'];
-                
-                echo "<tr>";
-                echo "<td>$entryDate</td>";
-                echo "<td>$weight</td>";
-                echo "<td>$workout</td>";
-                echo "<td>$caloricIntake</td>";
-                echo "<td>$caloriesBurned</td>";
-                echo "</tr>";
-            }
-            ?>
-        </table>
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th> Entry Date</th>
+                    <th> Weight</th>
+                    <th> Workout Type</th>
+                    <th> Caloric Intake</th>
+                    <th> Calories Burned</th>
+                </tr>
+                <?php
+                foreach ($results as $result)
+                {
+                    $entryDate = $result['entrydate'];
+                    $weight = $result['weight'];
+                    $workout = $result['workouttype'];
+                    $caloricIntake = $result['caloricintake'];
+                    $caloriesBurned = $result['caloriesburned'];
+
+                    echo "<tr>";
+                    echo "<td>$entryDate</td>";
+                    echo "<td>$weight</td>";
+                    echo "<td>$workout</td>";
+                    echo "<td>$caloricIntake</td>";
+                    echo "<td>$caloriesBurned</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+        </div>
         <form action="results.php" method="post">
             <input type="text" name="search">
             <input type="submit" value="Search">

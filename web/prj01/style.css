@@ -14,3 +14,45 @@ th {
   background-color: #426091;
   color: white;
 }
+
+.container-login {
+    width: 33%;
+    margin-left: 33%;
+    height: 50%;
+    box-shadow:  0px 0px 5px 6px #ccc;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.input-login {
+    border-radius: 50px;
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+}
+
+.button-login {
+    border-radius: 50px;
+    border: 1px solid lightgrey;
+    background-color: #55d130;
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    color: white;
+}
+
+.p-login {
+    color: lightslategrey;
+    font-family: Courier New;
+}
+
+.headerText {
+    font-family: Courier New;
+    color: white;
+}
+
+.header-login {
+    background-color: #55d130;
+    width: 100%;
+}

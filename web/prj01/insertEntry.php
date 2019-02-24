@@ -2,11 +2,11 @@
 session_start();
 $userid = $_SESSION['userid'];
 
-$entrydate = $_POST["entryDate"];
-$weight = $_POST["weight"];
-$workout = $_POST["workout"];
-$calIntake = $_POST["caloricIntake"];
-$calBurned = $_POST["caloriesBurned"];
+$entrydate = htmlspecialchars($_POST["entryDate"]);
+$weight = htmlspecialchars($_POST["weight"]);
+$workout = htmlspecialchars($_POST["workout"]);
+$calIntake = htmlspecialchars($_POST["caloricIntake"]);
+$calBurned = htmlspecialchars($_POST["caloriesBurned"]);
 
 require('dbConnect.php');
 $db = get_db();

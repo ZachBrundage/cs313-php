@@ -3,8 +3,8 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 
-$username = $_POST["Username"];
-$password = $_POST["Password"];
+$username = htmlspecialchars($_POST["Username"]);
+$password = htmlspecialchars($_POST["Password"]);
 
 
 $query = "SELECT userid FROM users WHERE username = '$username' AND userpass = '$password'";

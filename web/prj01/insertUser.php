@@ -1,7 +1,7 @@
 <?php
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = htmlspecialchars($_POST["username"]);
+$password = htmlspecialchars($_POST["password"]);
 
 require('dbConnect.php');
 $db = get_db();

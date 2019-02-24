@@ -15,6 +15,6 @@
             </form>
             <p class="p-login">Don't Have An Account?</p>
             <a href="newUser.php"><button class="button-login">Create New User</button></a>
-            </div>
+        </div>
     </body>
 </html>

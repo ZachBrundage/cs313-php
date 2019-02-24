@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container-login">
             <div class="header-login">
-                <h1 class="headerText">Log In</h1>
+                <h1 class="headerText">Create New Entry</h1>
             </div>
-            <form action="verifyLogin.php" method="post">
-                <input type="text" value="Username" name="Username" class="input-login"><br><br>
-                <input type="text" value="Password" name="Password" class="input-login"><br><br><br>
-                <input type="submit" value="Submit" class="button-login"><br><br><br><br><br><br><br><br>
+            <form action="insertUser.php" method="post">
+                <input type="text" value="Set Username" name="username" class="input-login"><br><br>
+                <input type="text" value="Set Password" name="password" class="input-login"><br><br><br>
+                <input type="submit" value="Submit" class="button-login">
             </form>
-            <p class="p-login">Don't Have An Account?</p>
-            <a href="newUser.php"><button class="button-login">Create New User</button></a>
-            </div>
+        </div>
     </body>
 </html>

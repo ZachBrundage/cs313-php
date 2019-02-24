@@ -42,6 +42,11 @@ th {
     color: white;
 }
 
+.button-login:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
 .p-login {
     color: lightslategrey;
     font-family: Courier New;
